@@ -3,7 +3,14 @@
     <style name="Base.Theme.TurnUp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/burnt_umber</item>
     </style>
-
+    <style name="chEntry" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/ch_textcolor</item>
+        <item name="chipBackgroundColor">@color/blue_light</item>
+        <item name="chipStrokeColor">@color/deep_cyan</item>
+        <item name="chipStrokeWidth">2dp</item>
+    </style>
     <style name="Theme.TurnUp" parent="Base.Theme.TurnUp" />
 </resources>
