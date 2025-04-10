@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TurnUp</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="forgotPassword">Olvidaste la Contraseña</string>
+    <string name="login">Iniciar Sesion</string>
+    <string name="resetPassword">Enviar Contraseña</string>
+    <string name="invitacion">Organiza. Ayuda. Impacta</string>
+    <string name="acept">He leido y acepto los</string>
+    <string name="terms">terminos y condiciones de uso</string>
+    <string name="empty_email">Introduce el email porfavor</string>
+    <string name="invalid_email">Email no valido</string>
 </resources>
