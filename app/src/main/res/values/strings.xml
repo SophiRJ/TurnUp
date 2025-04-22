@@ -1,13 +1,122 @@
 <resources>
     <string name="app_name">TurnUp</string>
-    <string name="email">Email</string>
+    <string name="email">Correo</string>
     <string name="password">Contraseña</string>
-    <string name="forgotPassword">Olvidaste la Contraseña</string>
+    <string name="forgotPassword">Olvide mi Contraseña</string>
     <string name="login">Iniciar Sesion</string>
+    <string name="uncount">No tienes cuenta?</string>
+    <string name="registro">Registrate</string>
     <string name="resetPassword">Enviar Contraseña</string>
-    <string name="invitacion">Organiza. Ayuda. Impacta</string>
+    <string name="invitacion">Haz que tu tiempo marque la diferencia</string>
     <string name="acept">He leido y acepto los</string>
     <string name="terms">terminos y condiciones de uso</string>
     <string name="empty_email">Introduce el email porfavor</string>
     <string name="invalid_email">Email no valido</string>
+    <string name="name">Nombre:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="edad">Edad:</string>
+    <string name="sexo">Sexo:</string>
+    <string name="ocupacion">Ocupacion:</string>
+    <string name="habilidades">Habilidades:</string>
+    <string name="habilidadesExtra">Habilidades Extra:</string>
+    <string name="rol">Rol:</string>
+    <string name="administrador">Administrador</string>
+    <string name="voluntario">Voluntario</string>
+    <string name="terminarRegistro">Terminar Registro</string>
+    <string name="sexo_prompt">Sexo</string>
+    <string name="ocupacion_prompt">Ocupación</string>
+    <string name="habilidades_prompt">Habilidades</string>
+
+    <string-array name="arraySexo">
+        <item>Sexo</item>
+        <item>Femenino</item>
+        <item>Masculino</item>
+    </string-array>
+    <string-array name="arrayProfesion">
+        <item>Profesión</item>
+        <item>Medico/Personal de salud</item>
+        <item>Seguridad/ Policia / Bombero</item>
+        <item>Organizador de Eventos/ Coordinador</item>
+        <item>Tecnico en sistemas/ Soporte IT</item>
+        <item>Voluntario general/ Asistente social</item>
+    </string-array>
+    <string-array name="habilidades">
+        <item>Habilidades</item>
+    </string-array>
+    <string-array name="arrayHabilidades_salud">
+        <item>Primeros auxilios</item>
+        <item>Reanimación cardiopulmonar (RCP)</item>
+        <item>Diagnóstico rápido</item>
+        <item>Atención en emergencias</item>
+        <item>Control de signos vitales</item>
+    </string-array>
+
+    <string-array name="arrayHabilidades_seguridad">
+        <item>Control de multitudes</item>
+        <item>Manejo de situaciones de riesgo</item>
+        <item>Primeros auxilios básicos</item>
+        <item>Comunicación por radio</item>
+        <item>Gestión de evacuación</item>
+    </string-array>
+
+    <string-array name="arrayHabilidades_eventos">
+        <item>Coordinación de equipos</item>
+        <item>Manejo de logística</item>
+        <item>Gestión del tiempo</item>
+        <item>Atención al cliente</item>
+        <item>Resolución de conflictos</item>
+    </string-array>
+
+    <string-array name="arrayHabilidades_it">
+        <item>Configuración de equipos</item>
+        <item>Soporte técnico en sitio</item>
+        <item>Instalación de redes</item>
+        <item>Manejo de software de control</item>
+        <item>Mantenimiento de sistemas</item>
+    </string-array>
+
+    <string-array name="arrayHabilidades_voluntario">
+        <item>Trabajo en equipo</item>
+        <item>Empatía</item>
+        <item>Comunicación efectiva</item>
+        <item>Acompañamiento emocional</item>
+        <item>Registro de información manual</item>
+    </string-array>
+    <string name="codInstitucion">Codigo Institucion</string>
+
+    <string name="AEventos">Mis Eventos</string>
+
+    <string name="bar_title">TurnUp</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_singout">Cerrar Sesion</string>
+    <string name="menu_eventos">Eventos</string>
+
+    <string name="navigation_drawer_open">Menu</string>
+    <string name="navigation_drawer_close">Cerrar Menu</string>
+    <string name="ubicaciones_evento">Ubicaciones del Evento\n</string>
+    <string name="add_location">Agregar Ubicacion</string>
+    <string name="duracion_evento">Duracion del Evento</string>
+    <string name="fecha_inicio">Fecha Inicio</string>
+    <string name="fecha_fin">Fecha Fin</string>
+    <string name="turnos">Turnos</string>
+    <string name="anadir_turno">Añadir Turno</string>
+    <string name="voluntarios_requeridos">Voluntarios Requeridos</string>
+    <string name="profesiones_requeridas">Profesiones Requeridas</string>
+    <string name="seleccionar_profesiones">Seleccionar Profesiones</string>
+    <string name="habilidades_necesarias">Habilidades Necesarias</string>
+    <string name="anadir_habilidad">Añadir Habilidad</string>
+    <string name="anadir_tarea">Añadir Tarea</string>
+    <string name="tareas_a_realizar">Tareas a Realizar</string>
+    <string name="imagen_evento">Imagen del Evento</string>
+    <string name="seleccionar_imagen">Seleccionar Imagen</string>
+    <string name="crear_evento">Crear Evento</string>
+    <string name="institucion">Institucion</string>
+    <string name="nombre_evento">Nombre del Evento</string>
+    <string-array name="tipoEvento">
+        <item>Tipo Evento</item>
+        <item>Salud</item>
+        <item>Concierto</item>
+        <item>Desastres</item>
+        <item>Obras Sociales</item>
+    </string-array>
 </resources>

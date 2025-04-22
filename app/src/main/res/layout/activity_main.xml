@@ -11,16 +11,87 @@
         android:id="@+id/img_baner"
         android:layout_width="match_parent"
         android:layout_height="223dp"
-        android:src="@mipmap/banner" />
+        android:src="@mipmap/banner"
+        android:paddingTop="30dp"/>
     <TextView
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/viewCustom"
-        android:paddingTop="20dp"
+        android:paddingTop="5dp"
         android:gravity="center"
         android:text="@string/invitacion"
-        android:textSize="18sp"
-        android:textColor="@color/burnt_umber"/>
+        android:textSize="15sp"
+        android:textColor="@color/deep_cyan"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/viewCustom"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingTop="50dp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/etPass"
+        style="@style/viewCustom"
+        android:layout_height="48dp"
+        android:hint="@string/password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"/>
+    <Button
+        style="@style/viewCustom"
+        android:id="@+id/btnLogin"
+        android:backgroundTint="@color/deep_cyan"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:textAlignment="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvForgotPass"
+        style="@style/viewCustom"
+        android:text="@string/forgotPassword"
+        android:paddingTop="0dp"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:textColor="@color/deep_cyan"/>
+    <Button
+        style="@style/viewCustom"
+        android:id="@+id/btnLoginGoogle"
+        android:textSize="20sp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:textAlignment="center"
+        android:backgroundTint="@color/white"
+        android:text="Iniciar con Google"
+        android:drawableLeft="@drawable/google"
+        android:textColor="@color/deep_cyan"
+        />
+    <LinearLayout
+        style="@style/viewCustom"
+        android:id="@+id/lyRegistro"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uncount"
+            android:id="@+id/etUncount"/>
+        <TextView
+            android:id="@+id/tvRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registro"
+            android:textColor="@color/deep_cyan"/>
+    </LinearLayout>
+
+
 </LinearLayout>
 

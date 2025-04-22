@@ -50,5 +50,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
+    implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation ("com.google.firebase:firebase-firestore:25.1.3")
+    implementation("com.kizitonwose.calendar:view:2.4.0")
+    // Lógica y modelos calendario
+    implementation("com.kizitonwose.calendar:core:2.4.0")
 }
