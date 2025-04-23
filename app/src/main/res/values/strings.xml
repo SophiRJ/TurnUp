@@ -26,6 +26,7 @@
     <string name="sexo_prompt">Sexo</string>
     <string name="ocupacion_prompt">Ocupación</string>
     <string name="habilidades_prompt">Habilidades</string>
+    <string name="nombre_completo">%1$s %2$s</string>
 
     <string-array name="arraySexo">
         <item>Sexo</item>
@@ -119,4 +120,16 @@
         <item>Desastres</item>
         <item>Obras Sociales</item>
     </string-array>
+    <string name="terminos_titulo">Términos y Condiciones</string>
+    <string name="atras">Volver</string>
+    <string name="terminos_completos">
+    Última actualización: 01/01/2023\n\n
+    1. Aceptación de los Términos\n
+    Al registrarte en TurnUp, aceptas cumplir con estos términos y condiciones.\n\n
+    2. Uso del Servicio\n
+    2.1. TurnUp es una plataforma para conectar voluntarios con oportunidades de servicio.\n
+    2.2. Debes ser mayor de 18 años para registrarte.\n\n
+    [resto del texto...]
+    </string>
+    <string name="eliminar_tarea">Eliminar Tarea</string>
 </resources>

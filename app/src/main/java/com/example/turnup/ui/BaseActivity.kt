@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 abstract class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    protected lateinit var binding: ActivityBaseBinding
+    private lateinit var binding: ActivityBaseBinding
     protected lateinit var mAuth: FirebaseAuth
     protected lateinit var db: FirebaseFirestore
 
@@ -53,7 +53,7 @@ abstract class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationIt
         return true
     }
 
-    protected fun checkUserRoleAndRedirect() {
+    private fun checkUserRoleAndRedirect() {
         val currentUser = mAuth.currentUser
         if (currentUser != null) {
             db.collection("Usuarios").document(currentUser.uid).get()

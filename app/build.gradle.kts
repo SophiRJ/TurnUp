@@ -54,7 +54,5 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database:21.0.0")
     implementation ("com.google.firebase:firebase-firestore:25.1.3")
-    implementation("com.kizitonwose.calendar:view:2.4.0")
-    // Lógica y modelos calendario
-    implementation("com.kizitonwose.calendar:core:2.4.0")
+    implementation("com.google.firebase:firebase-firestore-ktx")
 }

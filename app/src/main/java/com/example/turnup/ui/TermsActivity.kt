@@ -13,6 +13,9 @@ class TermsActivity : AppCompatActivity() {
         binding= ActivityTermsBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+        binding.btnAtras.setOnClickListener{
+            finish()
+        }
 
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -27,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="@string/institucion"
-                android:textColor="@color/turquoise"
+                android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
         </androidx.cardview.widget.CardView>
 
@@ -53,7 +52,6 @@
             android:layout_marginBottom="16dp"
             app:cardElevation="4dp"
             app:cardCornerRadius="12dp">
-
             <Spinner
                 android:id="@+id/spinnerTipoEvento"
                 android:layout_width="match_parent"
@@ -71,51 +69,24 @@
             android:text="@string/ubicaciones_evento"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
         <EditText
+            android:id="@+id/etUbicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ubicacion"/>
         <Button
+            android:id="@+id/btnAddUbicacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/add_location"
             android:layout_gravity="center"
             android:backgroundTint="@color/deep_cyan"/>
 
-        <!-- Mapa
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="8dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="12dp">
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/mapFragment"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </androidx.cardview.widget.CardView>-->
-
-        <!-- Botón para añadir ubicación
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAddLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_add_location"
-            app:backgroundTint="@color/white"
-            app:tint="@color/turquoise"
-            app:contentDescription="@string/add_location" />-->
-
-        <!-- Lista de ubicaciones -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUbicaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:minHeight="50dp" />
-
         <!-- Duración del evento -->
         <TextView
             android:layout_width="match_parent"
@@ -130,7 +101,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="16dp">
-
             <Button
                 android:id="@+id/btnFechaInicio"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -141,7 +111,6 @@
                 android:text="@string/fecha_inicio"
                 app:icon="@drawable/ic_calendar"
                 app:contentDescription="@string/fecha_inicio" />
-
             <Button
                 android:id="@+id/btnFechaFin"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -152,7 +121,6 @@
                 app:icon="@drawable/ic_calendar"
                 app:contentDescription="@string/fecha_fin" />
         </LinearLayout>
-
         <!-- Turnos -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,12 +133,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/turnos"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-
             <Space
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1" />
-
             <Button
                 android:id="@+id/btnAddTurno"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -181,7 +147,6 @@
                 app:iconGravity="textStart"
                 app:contentDescription="@string/anadir_turno" />
         </LinearLayout>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTurnos"
             android:layout_width="match_parent"
@@ -189,14 +154,12 @@
             android:minHeight="100dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_outline_grey" />
-
         <!-- Voluntarios requeridos -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="@string/voluntarios_requeridos">
-
             <EditText
                 android:id="@+id/etVoluntariosRequeridos"
                 android:layout_width="match_parent"
@@ -211,7 +174,6 @@
             android:layout_marginBottom="8dp"
             android:text="@string/profesiones_requeridas"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -224,6 +186,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/seleccionar_profesiones"
                 app:icon="@drawable/ic_add"
+                android:backgroundTint="@color/deep_cyan"
                 app:contentDescription="@string/seleccionar_profesiones" />
 
             <com.google.android.material.chip.ChipGroup
@@ -232,7 +195,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
-
         <!-- Habilidades necesarias -->
         <TextView
             android:layout_width="match_parent"
@@ -288,7 +250,7 @@
             app:icon="@drawable/ic_add"
             app:contentDescription="@string/anadir_tarea" />
 
-        <!-- Imagen del evento -->
+        <!-- Imagen del evento
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -314,7 +276,7 @@
             android:layout_marginBottom="24dp"
             android:text="@string/seleccionar_imagen"
             app:icon="@drawable/ic_image"
-            app:contentDescription="@string/seleccionar_imagen" />
+            app:contentDescription="@string/seleccionar_imagen" />-->
 
         <!-- Botón Crear Evento -->
         <Button
@@ -324,8 +286,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/crear_evento"
+            android:backgroundTint="@color/deep_cyan"
             app:contentDescription="@string/crear_evento" />
-
     </LinearLayout>
 </ScrollView>
 

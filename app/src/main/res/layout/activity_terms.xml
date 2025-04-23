@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.TermsActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:fillViewport="true"
+    android:padding="20dp"
+    android:background="@color/fondo4">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terminos_titulo"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvTerminos"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terminos_completos"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="4dp"/>
+        <Button
+            android:id="@+id/btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/atras"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/deep_cyan"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

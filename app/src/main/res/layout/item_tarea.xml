@@ -1,0 +1,24 @@
+<!-- res/layout/item_tarea.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvTarea"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo tarea"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/btnEliminarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="@string/eliminar_tarea"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+</LinearLayout>
