@@ -18,4 +18,7 @@
     <color name="fondo2">#ECEFF1</color>
     <color name="fondo3">#EEF2F3</color>
     <color name="fondo4">#E0F7F8</color>
+    <color name="rosa">#A07082</color>
+    <color name="azul">#5085AF</color>
+    <color name="gray_light">#8FA2B3</color>
 </resources>

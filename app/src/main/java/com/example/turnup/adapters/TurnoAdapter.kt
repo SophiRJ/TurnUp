@@ -1,6 +1,7 @@
 package com.example.turnup.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.turnup.databinding.ItemShiftBinding
@@ -9,7 +10,8 @@ import com.example.turnup.models.Turno
 class TurnoAdapter(
     private val turnos: MutableList<Turno>,
     private val onEditar: (Turno, Int) -> Unit,
-    private val onEliminar: (Int) -> Unit
+    private val onEliminar: (Int) -> Unit,
+    private val soloLectura: Boolean = false // <-- nuevo parámetro
 ) : RecyclerView.Adapter<TurnoAdapter.TurnoViewHolder>() {
 
     inner class TurnoViewHolder(val binding: ItemShiftBinding) : RecyclerView.ViewHolder(binding.root)
@@ -26,10 +28,16 @@ class TurnoAdapter(
             tvShiftTime.text = "${turno.horaInicio} - ${turno.horaFin}"
             tvVolunteersCount.text = "Voluntarios: ${turno.maxVoluntarios}"
 
-            btnEditShift.setOnClickListener { onEditar(turno, position) }
-            btnDeleteShift.setOnClickListener { onEliminar(position) }
+            if (soloLectura) {
+                btnEditShift.visibility = View.GONE
+                btnDeleteShift.visibility = View.GONE
+            } else {
+                btnEditShift.setOnClickListener { onEditar(turno, position) }
+                btnDeleteShift.setOnClickListener { onEliminar(position) }
+            }
         }
     }
+
 
     override fun getItemCount() = turnos.size
 }

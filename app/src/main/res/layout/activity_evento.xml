@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewEvento"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    tools:context=".ui.EventoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Imagen del evento -->
+        <ImageView
+            android:id="@+id/imgEventoDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/evento_generico" />
+
+        <!-- Nombre del evento -->
+        <TextView
+            android:id="@+id/tvNombreEventoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Evento"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <!-- Institución -->
+        <TextView
+            android:id="@+id/tvInstitucion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Institución organizadora"
+            android:textStyle="italic"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Ubicaciones -->
+        <TextView android:text="Ubicaciones:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvUbicacionesDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Fechas -->
+        <TextView android:text="Fechas:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvFechasDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Profesiones -->
+        <TextView android:text="Profesiones requeridas:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvProfesionesDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Habilidades -->
+        <TextView android:text="Habilidades requeridas:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvHabilidadesDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Tareas -->
+        <TextView android:text="Tareas a realizar:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvTareasDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Turnos -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turnos disponibles:"
+            android:textStyle="bold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTurnos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Plazas disponibles -->
+        <TextView
+            android:id="@+id/tvVoluntariosRequeridos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plazas disponibles: "
+            android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/btnDisponibilidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponibilidad"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/rosa"
+            />
+        <Button
+            android:id="@+id/btnSolicitarColaborar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solicitar colaborar"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/breaker_bay"/>
+    </LinearLayout>
+</ScrollView>

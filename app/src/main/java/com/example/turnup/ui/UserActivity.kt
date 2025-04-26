@@ -11,7 +11,7 @@ class UserActivity : BaseActivity() {
     private lateinit var binding: ActivityUserBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState) // Llama al onCreate de BaseActivity primero
+        super.onCreate(savedInstanceState)
 
         // Inflar el layout específico de UserActivity
         binding = ActivityUserBinding.inflate(layoutInflater)
@@ -21,16 +21,7 @@ class UserActivity : BaseActivity() {
         contentFrame.removeAllViews()
         contentFrame.addView(binding.root)
 
-        setupCalendar()
         tarjetUser()
-    }
-
-    private fun setupCalendar() {
-        // Ejemplo básico de configuración
-        binding.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            val selectedDate = "$dayOfMonth/${month + 1}/$year"
-            // Manejar la fecha seleccionada
-        }
     }
 
     private fun tarjetUser() {
@@ -52,8 +43,6 @@ class UserActivity : BaseActivity() {
                                 return@addOnSuccessListener
                             }
                         }
-
-                        // Usar recursos con placeholders en lugar de concatenación
                         binding.tvNombreUsuario.text = getString(R.string.nombre_completo, nombre, apellido)
                         binding.tvAProfesion.text = profesion ?: ""
                     } else {
@@ -74,18 +63,5 @@ class UserActivity : BaseActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
-
-    // Opcional: Sobrescribe si necesitas manejar items del menú de manera diferente
-    /*
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_item_eventos -> {
-                // Ya estamos en UserActivity, no necesitamos redirigir
-                binding.drawerLayout.closeDrawers()
-                return true
-            }
-            else -> return super.onNavigationItemSelected(item)
-        }
-    }*/
 }
 

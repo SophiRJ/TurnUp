@@ -1,6 +1,11 @@
 package com.example.turnup.models
 
+import com.google.firebase.firestore.Exclude
+import java.io.Serializable
+
 data class Evento(
+    @get:Exclude
+    var id: String = "",
     var nombre: String = "",
     var tipo: String = "",
     var ubicaciones: List<String> = listOf(),
@@ -14,4 +19,4 @@ data class Evento(
     var imagen: String = "",
     var autor: String="",
     var institucion: String=""
-)
+):Serializable

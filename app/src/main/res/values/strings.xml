@@ -123,13 +123,29 @@
     <string name="terminos_titulo">Términos y Condiciones</string>
     <string name="atras">Volver</string>
     <string name="terminos_completos">
-    Última actualización: 01/01/2023\n\n
+    Última actualización: 01/04/2025\n\n
     1. Aceptación de los Términos\n
     Al registrarte en TurnUp, aceptas cumplir con estos términos y condiciones.\n\n
     2. Uso del Servicio\n
     2.1. TurnUp es una plataforma para conectar voluntarios con oportunidades de servicio.\n
-    2.2. Debes ser mayor de 18 años para registrarte.\n\n
-    [resto del texto...]
+    2.2. Debes ser mayor de 18 años para registrarte.\n
+    2.3. Te comprometes a respetar a los demás usuarios y a actuar de forma ética y responsable durante tu participación en cualquier evento.\n\n
+    3. Registro y Seguridad dela Cuenta\n
+    3.1. Al registrarte, garantizas que toda la información proporcionada es veraz, actual y completa.\n
+    3.2. Turnup no se hace responsable por el uso no auotrizado de tu cuenta si compartes tus datos con terceros.\n\n
+    4. Derechos de la Plataforma\n
+    4.1 TurnUp puede actualizar estos términos en cualquier momento. Se notificará a los usuarios sobre cambios relevantes.\n
+    4.2 La plataforma puede suspender cuentas en caso de mal uso o violación de estos términos.\n\n
+    5. Privacidad y Datos\n
+    5.1 La información personal será tratada conforme a la Política de Privacidad.\n
+    5.2 Los datos recopilados se usan para mejorar la experiencia y sugerencias de eventos.\n\n
+    6. Limitación de Responsabilidad\n
+    6.1 TurnUp no se hace responsable de incidentes ocurridos durante los eventos. Cada institución organizadora es responsable directa de sus actividades.\n\n
+    7. Contacto\n
+    7.1 Para consultas sobre estos términos, puedes escribir a sofiarojasc5@gmail.com.\n\n
+
+        Al continuar utilizando TurnUp, confirmas que has leído y aceptado estos Términos y Condiciones.
     </string>
     <string name="eliminar_tarea">Eliminar Tarea</string>
+    <string name="tipo_evento">Tipo de Evento</string>
 </resources>

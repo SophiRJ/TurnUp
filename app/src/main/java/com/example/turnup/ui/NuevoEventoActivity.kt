@@ -161,12 +161,13 @@ class NuevoEventoActivity : AppCompatActivity(), OnClickListener,OnItemClickList
                 profesiones = profesionesSeleccionadas,
                 habilidades = habilidadesSeleccionadas,
                 tareas = listaTareas
-                // Aquí añadirías más campos si quieres.
+
             )
 
             db.collection("eventos")
                 .add(evento)
-                .addOnSuccessListener {
+                .addOnSuccessListener { doc->
+                    evento.id=doc.id
                     Toast.makeText(this, "Evento guardado con éxito", Toast.LENGTH_SHORT).show()
                     finish()
                 }

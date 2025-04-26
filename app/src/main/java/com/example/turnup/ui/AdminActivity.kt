@@ -4,8 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.turnup.R
+import com.example.turnup.adapters.AdminEventoAdapter
 import com.example.turnup.databinding.ActivityAdminBinding
+import com.example.turnup.models.Evento
 
 class AdminActivity : BaseActivity(), View.OnClickListener {
     private lateinit var binding: ActivityAdminBinding
@@ -23,6 +27,7 @@ class AdminActivity : BaseActivity(), View.OnClickListener {
 
         binding.btnCrearEvento.setOnClickListener(this)
         targetAdmin()
+        cargarMisEventos()
     }
 
     override fun onClick(v: View?) {
@@ -73,17 +78,59 @@ class AdminActivity : BaseActivity(), View.OnClickListener {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
+    private fun cargarMisEventos() {
+        val uid = mAuth.currentUser?.uid ?: return
 
-    // Opcional: Si necesitas manejar items del menú de manera diferente en AdminActivity
-    /*
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_item_eventos -> {
-                // Ya estamos en AdminActivity, no necesitamos redirigir
-                binding.drawerLayout.closeDrawers()
-                return true
+        db.collection("eventos")
+            .whereEqualTo("autor", uid)
+            .get()
+            .addOnSuccessListener { documentos ->
+                val eventos = documentos.mapNotNull { doc ->
+                    try {
+                        val evento = doc.toObject(Evento::class.java)
+                        evento?.apply { id = doc.id }
+                    } catch (e: Exception) {
+                        Log.e("AdminActivity", "Error al convertir evento", e)
+                        null
+                    }
+                }
+
+                if (eventos.isEmpty()) {
+                    Toast.makeText(this, "Aún no has creado eventos", Toast.LENGTH_SHORT).show()
+                }
+
+                val adapter = AdminEventoAdapter(
+                    eventos,
+                    onEditar = { evento ->
+                        val intent = Intent(this, EditarEventoActivity::class.java)
+                        intent.putExtra("evento", evento)
+                        startActivity(intent)
+                    },
+                    onEliminar = { evento ->
+                        db.collection("eventos").document(evento.id).delete()
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "Evento eliminado", Toast.LENGTH_SHORT).show()
+                                cargarMisEventos()
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(this, "Error al eliminar", Toast.LENGTH_SHORT).show()
+                            }
+                    },
+                    onDetalles = { evento ->
+                        val intent = Intent(this, EventoActivity::class.java)
+                        intent.putExtra("evento", evento)
+                        startActivity(intent)
+                        Log.e("DEBUG_DISPO", "Error: evento.id o userId nulos o vacíos - evento.id = ${evento.id}, userId = ")
+                    }
+                )
+
+
+                binding.recyclerMisEventos.layoutManager = LinearLayoutManager(this)
+                binding.recyclerMisEventos.adapter = adapter
+
             }
-            else -> return super.onNavigationItemSelected(item)
-        }
-    }*/
+            .addOnFailureListener {
+                Toast.makeText(this, "Error al cargar eventos", Toast.LENGTH_SHORT).show()
+            }
+    }
 }

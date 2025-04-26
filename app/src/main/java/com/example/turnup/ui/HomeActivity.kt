@@ -24,11 +24,11 @@ class HomeActivity : BaseActivity() {
         bindingHome.tvWelcome.text = "¡Bienvenido!\n$email"
         bindingHome.tvProvider.text = "Autenticado con: $provider"
 
-        bindingHome.btnLogout.setOnClickListener {
+        /*bindingHome.btnLogout.setOnClickListener {
             mAuth.signOut()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }
+        }*/
     }
 }
 
